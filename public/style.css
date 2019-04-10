@@ -1,3 +1,4 @@
-/* #Info {
-    display: block;
-  } */
+#photoContainer {
+    display: flex;
+    flex-direction: column;
+  }
