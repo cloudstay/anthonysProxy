@@ -31,37 +31,37 @@ app.get('/api/rooms/:id/info', (req, res) => {
 })
 
 
-// app.get('/api/rooms/:id/info', (req, res) => {
-//   request(`http://localhost:3002/api/rooms/${req.params.id}/info`, (error, response, body) => {
-//     if (error){
-//       console.log('working')
-//       res.send(404);
-//     } else {
-//       res.status(200).send(body);
-//     }
-//   })
-// })
+app.get('/api/rooms/:id/photos', (req, res) => {
+  request(`http://localhost:3006/api/rooms/${req.params.id}/photos`, (error, response, body) => {
+    if (error){
+      console.log('working')
+      res.send(404);
+    } else {
+      res.status(200).send(body);
+    }
+  })
+})
 
 
-// app.get('/api/rooms/:id/info', (req, res) => {
-//   request(`http://localhost:3003/api/rooms/${req.params.id}/info`, (error, response, body) => {
-//     if (error){
-//       console.log('working')
-//       res.send(404);
-//     } else {
-//       res.status(200).send(body);
-//     }
-//   })
-// })
+app.get('/api/rooms/:id/listing', (req, res) => {
+  request(`http://localhost:3003/api/rooms/${req.params.id}/listing`, (error, response, body) => {
+    if (error){
+      console.log('working')
+      res.send(404);
+    } else {
+      res.status(200).send(body);
+    }
+  })
+})
 
 
-// app.get('/api/rooms/:id/info', (req, res) => {
-//   request(`http://localhost:3004/api/rooms/${req.params.id}/info`, (error, response, body) => {
-//     if (error){
-//       console.log('working')
-//       res.send(404);
-//     } else {
-//       res.status(200).send(body);
-//     }
-//   })
-// })
+app.get('/api/rooms/:id/reviews', (req, res) => {
+  request(`http://localhost:3004/api/rooms/${req.params.id}/reviews`, (error, response, body) => {
+    if (error){
+      console.log('working')
+      res.send(404);
+    } else {
+      res.status(200).send(body);
+    }
+  })
+})
