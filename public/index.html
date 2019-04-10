@@ -2,20 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>FEC</title>
   </head>
   <body>
-    <div id="Info"></div>
-    <script src="/lib/react.development.js"></script>
-    <script src="/lib/react-dom.development.js"></script>
-    <script src="http://localhost:3001/app.js"></script>
+    <div>
+      <div id="info"></div>
+      <!-- <div id="app"></div> -->
+      <!-- <div id="app"></div> -->
+      <!-- <div id="app"></div> -->
+    </div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type='text/javascript' src="http://localhost:3001/rooms/:id/dist/bundle.js"></script>
+    <script type="text/css" src="http://localhost:3001/rooms/:id/dist/style.css"></script>
+
+    <!-- <script type='text/javascript' src="http://localhost:3002/rooms/:id/dist/bundle.js"></script>
+    <script type="text/css" src="http://localhost:3002/rooms/:id/dist/style.css"></script> -->
+
+    <!-- <script type='text/javascript' src="http://localhost:3003/rooms/:id/dist/bundle.js"></script>
+    <script type="text/css" src="http://localhost:3003/rooms/:id/dist/style.css"></script> -->
+
+    <!-- <script type='text/javascript' src="http://localhost:3004/rooms/:id/dist/bundle.js"></script>
+    <script type="text/css" src="http://localhost:3004/rooms/:id/dist/style.css"></script> -->
+
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
-      ReactDOM.render(
-        React.createElement(Info),
-        document.getElementById('Info')
-      );
+      // ReactDOM.render(
+      //   React.createElement(info),
+      //   document.getElementById('info')
+      // );
     </script>
   </body>
 </html>
