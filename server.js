@@ -61,7 +61,34 @@ app.get('/api/rooms/:id/reviews', (req, res) => {
       console.log('working')
       res.send(404);
     } else {
-      res.status(200).send(body);
+      res.status(200);
+      res.send(body);
     }
   })
 })
+
+
+app.get('/api/rooms/:id/reviews', (req, res) => {
+  request(`http://localhost:3004/api/rooms/${req.params.id}/reviews`, (error, response, body) => {
+    if (error){
+      console.log('working')
+      res.send(404);
+    } else {
+      res.status(200);
+      res.send(body);
+    }
+  })
+})
+
+app.get('/api/rooms/:id/searchReviews', (req, res) => {
+  request(`http://localhost:3004/api/rooms/${req.params.id}/searchReviews`, (error, response, body) => {
+    if (error){
+      console.log('working')
+      res.send(404);
+    } else {
+      res.status(200);
+      res.send(body);
+    }
+  })
+})
+
