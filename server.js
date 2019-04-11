@@ -81,7 +81,7 @@ app.get('/api/rooms/:id/reviews', (req, res) => {
 })
 
 app.get('/api/rooms/:id/searchReviews', (req, res) => {
-  request(`http://localhost:3004/api/rooms/${req.params.id}/searchReviews`, (error, response, body) => {
+  request(`http://localhost:3004/api/rooms/${req.params.id}/searchReviews/?search=${req.query.search}`, (error, response, body) => {
     if (error){
       console.log('working')
       res.send(404);
